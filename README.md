@@ -72,6 +72,38 @@ kody run -s kody-typescript.json
 
 Add the following params to your generated concepts using the `kody ride` command or manually. As an example, A declaration for a class might look like the following:
 ```json
+{
+			"name": "Bird",
+			"template": "class.ts.template",
+			"outputDir": "classes",
+			"extends": "Animal",
+			"implements": "",
+			"hasConstructor": true,
+			"args": [
+				{
+					"name": "name",
+					"type": "string"
+				}
+			],
+			"methods": [
+				{
+					"name": "fly",
+					"returnType": "void"
+				}
+			],
+			"properties": [
+				{
+					"name": "family",
+					"type": "string",
+					"optional": false
+				},
+				{
+					"name": "weight",
+					"type": "number",
+					"optional": true
+				}
+			]
+		}
 ```
 ## 📅 Future Features
 - Generate `module`
