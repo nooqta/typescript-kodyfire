@@ -1,0 +1,34 @@
+{
+  "name": "basic",
+  "version": "0.1",
+  "rootDir": "out",
+  "concepts": [
+    {
+      "name": "concept",
+      "outputDir": "",
+      "template": {
+        "path": "templates/",
+        "options": [],
+        "placeholders": []
+      }
+    },
+    {
+      "name": "class",
+      "outputDir": "",
+      "template": {
+        "path": "templates/",
+        "options": [],
+        "placeholders": []
+      }
+    },
+    {
+      "name": "interface",
+      "outputDir": "",
+      "template": {
+        "path": "templates/",
+        "options": [],
+        "placeholders": []
+      }
+    }
+  ]
+}
