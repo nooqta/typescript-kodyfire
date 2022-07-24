@@ -29,6 +29,14 @@
                 "options": [],
                 "placeholders": []
             }
+        }, {
+            "name": "tsconfig",
+            "outputDir": "",
+            "template": {
+                "path": "templates/",
+                "options": [],
+                "placeholders": []
+            }
         }
     ]
 }

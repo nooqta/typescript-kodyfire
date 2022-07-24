@@ -24,53 +24,8 @@ npm install typescript-kodyfire
 ## Usage
 
 Refer to the kodyfire [install a kody](https://github.com/nooqta/kodyfire#install-a-kody) section.
-Once your project is initialized and ready for kody, run the following command to generate your assets.
-```sh
-kody run -s kody-typescript.json
-```
-### Available concepts 
-
-#### `class` 
-
-> Generates a typescript class
-
-##### Params
-
-- `name` _string_ - class name. Default filename
-- `template` _enum_ - template name to use. Only one by default.
-- `implements` _string_ - Interface(s) to implement
-- `extends` _string_ - class(es) to extend.
-- `properties` [_Property[]_](#property) - list of properties
-- `methods` [_Method[]_](#method) - list of methods
-- `hasConstructor` _boolean_ - if class should have a constructor
-- `args` _{name: string, type: string}_ - List of argument to pass to the constructor. `hasConstructor` must be true.
-- `outputDir` _string_ - The output directory
-
-#### `interface` 
-
-> Generates a typescript interface
-
-##### Params
-
-- `name` _string_ - class name. Default filename
-- `template` _enum_ - template name to use. Only one by default.
-- `extends` _string_ - class(es) to extend.
-- `properties` [_Property[]_](#property) - list of properties
-- `outputDir` _string_ - The output directory
-
-###### Property
-- `name` _string_ - property name
-- `type` _string_ - property type
-- `optional` _boolean_ - if the property is optional when constructing an object
-
-
-###### Method
-- `name` _string_ - method name
-- `params` _{name: string, type: string}_ - list of method arguments. Leave empty if none
-- `returnType` _string_ - Return type (example: string, number, void)
-  
-
-Add the following params to your generated concepts using the `kody ride` command or manually. As an example, A declaration for a class might look like the following:
+Once your project is initialized and ready for kody,
+generate your tsconfig concept using the `kody ride` command or manually. As an example, A declaration for a tsconfig concept might look like the following: 
 ```json
 {
 			"name": "Bird",
@@ -105,6 +60,63 @@ Add the following params to your generated concepts using the `kody ride` comman
 			]
 		}
 ```
+
+After adding your concept(s) definitions, run the following command to generate your assets.
+
+```sh
+kody run -s kody-typescript.json
+```
+### Available concepts 
+
+#### `class` 
+
+> Generates a typescript class
+
+##### Params
+
+- `name` _string_ - class name. Default filename
+- `template` _enum_ - template name to use. Only one by default.
+- `implements` _string_ - Interface(s) to implement
+- `extends` _string_ - class(es) to extend.
+- `properties` [_Property[]_](#property) - list of properties
+- `methods` [_Method[]_](#method) - list of methods
+- `hasConstructor` _boolean_ - if class should have a constructor
+- `args` _{name: string, type: string}_ - List of argument to pass to the constructor. `hasConstructor` must be true.
+- `outputDir` _string_ - The output directory
+
+#### `interface` 
+
+> Generates a typescript interface
+
+##### Params
+
+- `name` _string_ - class name. Default filename
+- `template` _enum_ - template name to use. Only one by default.
+- `extends` _string_ - class(es) to extend.
+- `properties` [_Property[]_](#property) - list of properties
+- `outputDir` _string_ - The output directory
+
+##### Params
+
+- `name` [__enum__](#Tsconfigs) - The tsconfig  configuration name
+- `outputDir` _string_ - The output directory
+
+
+###### Tsconfigs
+Refer to [this reference](https://github.com/tsconfig/bases/tree/main/bases) for a list of available tsconfig templates
+###### Property
+- `name` _string_ - property name
+- `type` _string_ - property type
+- `optional` _boolean_ - if the property is optional when constructing an object
+
+
+###### Method
+- `name` _string_ - method name
+- `params` _{name: string, type: string}_ - list of method arguments. Leave empty if none
+- `returnType` _string_ - Return type (example: string, number, void)
+  
+
+Add the following params to your generated concepts using the `kody ride` command or manually. As an example, A declaration for a class might look like the following:
 ## 📅 Future Features
 - Generate `module`
 - Generate `type`

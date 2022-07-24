@@ -25,6 +25,20 @@ export declare class Kody extends BaseKody {
                 type: string;
                 items: any;
             };
+            tsconfig: {
+                type: string;
+                items: {
+                    type: string;
+                    properties: {
+                        name: {
+                            enum: any[];
+                        };
+                        outputDir: {
+                            type: string;
+                        };
+                    };
+                };
+            };
         };
         required: string[];
     }, technology?: Technology);

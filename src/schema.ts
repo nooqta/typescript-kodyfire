@@ -1,3 +1,5 @@
+import { getTsConfigNames }  from 'tsconfig-templates'
+
 export const concept = {
   type: 'object',
   properties: {
@@ -85,12 +87,22 @@ export const _class = {
       },
   }
 }
+export const tsconfig = {
+  type: 'object',
+  properties: {
+    name: { enum: getTsConfigNames() },
+    outputDir: { type: 'string' },
+  },
+};
 
 export const conceptArray = (type: any) => ({
   type: 'array',
   items: type,
 });
-
+export const tsConfigArray = {
+  type: 'array',
+  items: tsconfig,
+};
 export const schema = {
   type: 'object',
   properties: {
@@ -100,6 +112,7 @@ export const schema = {
     concept: conceptArray(concept),
     class: conceptArray(_class),
     interface: conceptArray(_interface),
+    tsconfig: tsConfigArray,
 
   },
   required: ['name'],

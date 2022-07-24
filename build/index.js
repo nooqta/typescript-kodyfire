@@ -10,7 +10,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Kody = exports.Interface = exports.Class = exports.Concept = exports.schema = exports.Technology = void 0;
+exports.Kody = exports.Tsconfig = exports.Interface = exports.Class = exports.Concept = exports.schema = exports.Technology = void 0;
 __exportStar(require("basic-kodyfire"), exports);
 var technology_1 = require("./technology");
 Object.defineProperty(exports, "Technology", { enumerable: true, get: function () { return technology_1.Technology; } });
@@ -22,6 +22,8 @@ var class_1 = require("./class");
 Object.defineProperty(exports, "Class", { enumerable: true, get: function () { return class_1.Class; } });
 var interface_1 = require("./interface");
 Object.defineProperty(exports, "Interface", { enumerable: true, get: function () { return interface_1.Interface; } });
+var tsconfig_1 = require("./tsconfig");
+Object.defineProperty(exports, "Tsconfig", { enumerable: true, get: function () { return tsconfig_1.Tsconfig; } });
 var kody_1 = require("./kody");
 Object.defineProperty(exports, "Kody", { enumerable: true, get: function () { return kody_1.Kody; } });
 //# sourceMappingURL=index.js.map

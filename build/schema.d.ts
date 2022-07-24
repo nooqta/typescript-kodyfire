@@ -132,9 +132,34 @@ export declare const _class: {
     };
     type: string;
 };
+export declare const tsconfig: {
+    type: string;
+    properties: {
+        name: {
+            enum: any[];
+        };
+        outputDir: {
+            type: string;
+        };
+    };
+};
 export declare const conceptArray: (type: any) => {
     type: string;
     items: any;
+};
+export declare const tsConfigArray: {
+    type: string;
+    items: {
+        type: string;
+        properties: {
+            name: {
+                enum: any[];
+            };
+            outputDir: {
+                type: string;
+            };
+        };
+    };
 };
 export declare const schema: {
     type: string;
@@ -159,6 +184,20 @@ export declare const schema: {
         interface: {
             type: string;
             items: any;
+        };
+        tsconfig: {
+            type: string;
+            items: {
+                type: string;
+                properties: {
+                    name: {
+                        enum: any[];
+                    };
+                    outputDir: {
+                        type: string;
+                    };
+                };
+            };
         };
     };
     required: string[];

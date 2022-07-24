@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.schema = exports.conceptArray = exports._class = exports._interface = exports.concept = void 0;
+exports.schema = exports.tsConfigArray = exports.conceptArray = exports.tsconfig = exports._class = exports._interface = exports.concept = void 0;
+const tsconfig_templates_1 = require("tsconfig-templates");
 exports.concept = {
     type: 'object',
     properties: {
@@ -66,11 +67,22 @@ exports._class = Object.assign(Object.assign({}, exports.concept), { properties:
                 }
             }
         } }) });
+exports.tsconfig = {
+    type: 'object',
+    properties: {
+        name: { enum: (0, tsconfig_templates_1.getTsConfigNames)() },
+        outputDir: { type: 'string' },
+    },
+};
 const conceptArray = (type) => ({
     type: 'array',
     items: type,
 });
 exports.conceptArray = conceptArray;
+exports.tsConfigArray = {
+    type: 'array',
+    items: exports.tsconfig,
+};
 exports.schema = {
     type: 'object',
     properties: {
@@ -80,6 +92,7 @@ exports.schema = {
         concept: (0, exports.conceptArray)(exports.concept),
         class: (0, exports.conceptArray)(exports._class),
         interface: (0, exports.conceptArray)(exports._interface),
+        tsconfig: exports.tsConfigArray,
     },
     required: ['name'],
 };

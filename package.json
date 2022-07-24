@@ -28,6 +28,7 @@
     "kodyfire-core": "^0.0.139",
     "moment": "^2.29.1",
     "pluralize": "^8.0.0",
+    "tsconfig-templates": "^0.0.6",
     "typescript": "~4.5.5"
   },
   "devDependencies": {
