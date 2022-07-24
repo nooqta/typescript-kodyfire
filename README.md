@@ -96,6 +96,9 @@ kody run -s kody-typescript.json
 - `properties` [_Property[]_](#property) - list of properties
 - `outputDir` _string_ - The output directory
 
+#### `tsconfig` 
+
+> Generates a tsconfig file
 ##### Params
 
 - `name` [__enum__](#Tsconfigs) - The tsconfig  configuration name
