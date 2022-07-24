@@ -1,7 +1,7 @@
 {
   "name": "typescript-kodyfire",
-  "version": "0.0.1",
-  "description": "Generate a typescript class using kodyfire",
+  "version": "0.0.2",
+  "description": "Generate a typescript related artifacts using kodyfire",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
