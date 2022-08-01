@@ -1,6 +1,6 @@
 {
   "name": "typescript-kodyfire",
-"version": "0.0.11",
+"version": "0.0.12",
   "description": "Generate a typescript related artifacts using kodyfire",
   "main": "build/index.js",
   "scripts": {
